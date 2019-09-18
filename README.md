@@ -21,3 +21,16 @@ tns debug <platform>
 tns build <platform> --env.production
 
 ```
+
+## Debug
+
+``` bash
+# Run vue-devtools
+
+# Installed Globally
+vue-devtools
+
+# Installed Locally
+npx vue-devtools
+
+```

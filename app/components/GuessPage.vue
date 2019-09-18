@@ -1,12 +1,12 @@
 <template>
-  <Page>
-    <ActionBar :title="title">
-      <NavigationButton android.systemIcon="ic_menu_back" @tap="$navigateBack" />
-    </ActionBar>
-    <StackLayout orientation="vertical" horizontalAlignment="center" verticalAlignment="center">
-      <TextField keyboardType="number" v-model="numberGuessed" hint="0" width="50%" />
-      <Button text="MAKE A GUESS" @tap="makeAGuess" />
-    </StackLayout>
+  <page>
+    <action-bar :title="title">
+      <navigation-button android.systemIcon="ic_menu_back" @tap="$navigateBack" />
+    </action-bar>
+    <stack-layout orientation="vertical" horizontalAlignment="center" verticalAlignment="center">
+      <text-field keyboardType="number" v-model="numberGuessed" hint="0" width="50%" />
+      <button text="MAKE A GUESS" @tap="makeAGuess" />
+    </stack-layout>
   </Page>
 </template>
 
