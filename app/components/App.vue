@@ -1,36 +1,36 @@
 <template>
-  <Page>
-    <ActionBar :title="title" />
-    <FlexboxLayout flexDirection="column" justifyContent="space-around" alignItems="center">
+  <page xmlns:Card="@nstudio/nativescript-cardview">
+    <action-bar :title="title" />
+    <flexbox-layout flexDirection="column" justifyContent="space-around" alignItems="center">
       <Label class="title" text="We are starting a game !!" />
-      <CardView class="card" elevation="40" radius="10">
-        <StackLayout
+      <card-view margin="10" class="card" elevation="40" radius="1">
+        <stack-layout
           orientation="vertical"
           verticalAlignment="center"
           horizontalAlignment="center"
         >
-          <Label text="Select a number" />
-          <TextField keyboardType="number" v-model="numberChosen.value" hint="0" width="50%" />
-          <StackLayout orientation="horizontal" horizontalAlignment="center" width="100%">
-            <Button text="RESET" @tap="reset"></Button>
-            <Button text="CONFIRM" @tap="confirm"></Button>
-          </StackLayout>
-        </StackLayout>
-      </CardView>
-      <CardView class="card" elevation="40" radius="10">
-        <StackLayout
+          <label text="Select a number" />
+          <text-field keyboardType="number" v-model="numberChosen.value" hint="0" width="50%" />
+          <stack-layout orientation="horizontal" horizontalAlignment="center" verticalAlignment="center">
+            <button text="RESET" @tap="reset"></button>
+            <button text="CONFIRM" @tap="confirm"></button>
+          </stack-layout>
+        </stack-layout>
+      </card-view>
+      <card-view class="card" elevation="40" radius="10">
+        <stack-layout
           v-if="numberChosen.isChosen"
           orientation="vertical"
           horizontalAlignment="center"
           verticalAlignment="center"
         >
-          <Label text="The number you have chosen is" />
-          <Label :text="numberChosen.value" />
-          <Button text="START GAME" @tap="startGame"></Button>
-        </StackLayout>
-      </CardView>
-    </FlexboxLayout>
-  </Page>
+          <label text="The number you have chosen is" />
+          <label :text="numberChosen.value" />
+          <button text="START GAME" @tap="startGame"></button>
+        </stack-layout>
+      </card-view>
+    </flexbox-layout>
+  </page>
 </template>
 
 <script >
@@ -87,10 +87,14 @@ ActionBar {
   color: #ffffff;
 }
 
-CardView {
+card-view {
   background-color: white;
   text-align: center;
   font-size: 16pt;
+}
+
+.card {
+  padding: 10px;
 }
 
 .title {

@@ -3,8 +3,9 @@ import App from './components/App'
 
 import VueDevtools from 'nativescript-vue-devtools'
 
-Vue.registerElement('CardView',
-() => require('@nstudio/nativescript-cardview').CardView
+Vue.registerElement(
+  'CardView',
+  () => require('@nstudio/nativescript-cardview').CardView
 );
 
 if(TNS_ENV !== 'production') {
